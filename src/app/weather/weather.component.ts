@@ -80,7 +80,9 @@ export class WeatherComponent implements OnInit {
       this.weather_icon_daily=[]
       this.weather_icon_url_daily=[]
       this.dates=[]
-      this.myChart.destroy()
+      if(this.myChart) {
+        this.myChart.destroy()
+      }
       this.loading=true
       this.errorMessage=undefined
     }
